@@ -1,0 +1,8 @@
+{
+  "name": "ng6-app",
+  "version": "0.0.0",
+  "main": "dist/nw/index.html",
+  "window": {
+    "toolbar": true
+  }
+}

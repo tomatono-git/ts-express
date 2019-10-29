@@ -1,0 +1,8 @@
+<ng-container>
+    <nav mat-tab-nav-bar>
+        <a mat-tab-link *ngFor="let link of links" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive" [active]="rla.isActive">{{link.label}}</a>
+        <mat-tab label="TabTabHeader2"></mat-tab>
+    </nav>
+
+    <router-outlet></router-outlet>
+</ng-container>

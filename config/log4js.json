@@ -1,0 +1,41 @@
+{
+    "appenders": {
+        "debug": {
+            "type": "dateFile",
+            "filename": "logs/debug.log",
+            "pattern": "_yyyy-MM-dd",
+            "backups": 10
+        },
+        "system": {
+            "type": "dateFile",
+            "filename": "logs/system.log",
+            "pattern": "_yyyy-MM-dd",
+            "backups": 10
+        },
+        "error": {
+            "type": "dateFile",
+            "filename": "logs/error.log",
+            "pattern": "_yyyy-MM-dd",
+            "backups": 10
+        },
+        "console": {
+            "type": "console"
+        }
+    },
+    "categories": {
+        "default": {
+            "appenders": [
+                "debug",
+                "system",
+                "console"
+            ],
+            "level": "trace"
+        },
+        "error": {
+            "appenders": [
+                "error"
+            ],
+            "level": "trace"
+        }
+    }
+}
