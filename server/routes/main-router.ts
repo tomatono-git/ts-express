@@ -17,12 +17,7 @@ export class DispatchController {
         logger.debug('dispatch(): req.query=%o', req.query);
         logger.debug('dispatch(): req.params=%o', req.params);
 
-        // res.redirect('http://loginebula-local.com/ahprl9syxmi3xy4ibofaf/dispatch');
-
-        // http://localhost:3000/ahprl9syxmi3xy4ibofaf/dispatch?api=sc.sthd.init&tn=CURRENT
-        // http://loginebula-local.com/ahprl9syxmi3xy4ibofaf/dispatch?api=sc.sthd.init&tn=CURRENT
-
-        var url = 'http://loginebula-local.com' + req.url;
+        var url = 'http://localhost' + req.url;
 
         logger.debug('dispatch(): url=%s', url);
 
@@ -112,7 +107,7 @@ export const DispatcRouterFactory = {
         const controller = new DispatchController();
         const router = Router();
 
-        router.get('/ahprl9syxmi3xy4ibofaf/dispatch', controller.dispatch.bind(controller));
+        router.get('/dispatch', controller.dispatch.bind(controller));
 
         return router;
     }
